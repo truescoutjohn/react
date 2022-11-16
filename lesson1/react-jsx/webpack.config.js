@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -7,6 +8,7 @@ module.exports = (env, args) => {
     entry: './src/index.js',
     output: {
       filename: 'bundle.js',
+      path: path.resolve(__dirname, 'review_build'),
     },
     module: {
       rules: [
