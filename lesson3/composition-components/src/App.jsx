@@ -7,7 +7,7 @@ const user = {
 };
 
 const App = () => {
-  return <Comment name={user.name} date={new Date()} avatarUrl={user.avatarUrl} />;
+  return <Comment author={user} date={new Date()} text="some text" />;
 };
 
 export default App;
