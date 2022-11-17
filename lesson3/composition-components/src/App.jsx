@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from './Comments.jsx';
+import Comment from './Comment.jsx';
 
 const user = {
   name: 'Valera',
