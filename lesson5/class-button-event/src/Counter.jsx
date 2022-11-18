@@ -6,7 +6,7 @@ import './goodButton.scss';
 // 3. Change and render new time after each second
 //  3.1. Use moment to transform date to time
 
-class GoodButton extends Component {
+class Counter extends Component {
   constructor(props) {
     super(props);
   }
@@ -24,4 +24,4 @@ class GoodButton extends Component {
   }
 }
 
-export default GoodButton;
+export default Counter;

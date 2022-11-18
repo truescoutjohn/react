@@ -1,8 +1,8 @@
 import React from 'react';
-import GoodButton from './GoodButton.jsx';
+import Counter from './Counter.jsx';
 
 const App = props => {
-  return <GoodButton />;
+  return <Counter />;
 };
 
 export default App;
