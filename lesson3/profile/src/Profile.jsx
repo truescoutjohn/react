@@ -8,10 +8,10 @@ const Profile = props => {
   return (
     <div className="profile">
       <div className="profile__name">
-        {props.user.firstName} {props.user.lastName}
+        {props.userData.firstName} {props.userData.lastName}
       </div>
       <div className="profile__birth">
-        {formatDate(props.user.birthDate)} {props.user.birthPlace}
+        {formatDate(props.userData.birthDate)} {props.userData.birthPlace}
       </div>
     </div>
   );

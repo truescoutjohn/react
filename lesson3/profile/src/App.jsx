@@ -9,7 +9,7 @@ const userData = {
 };
 
 const App = props => {
-  return <Profile user={userData} />;
+  return <Profile userData={userData} />;
 };
 
 export default App;
