@@ -21,17 +21,17 @@ class Colors extends Component {
       <div className="colors">
         <button
           className="colors__button"
-          style={{ background: '#f00' }}
+          style={{ backgroundColor: '#f00' }}
           onClick={this.switchColor}
         ></button>
         <button
           className="colors__button"
-          style={{ background: '#0f0' }}
+          style={{ backgroundColor: '#0f0' }}
           onClick={this.switchColor}
         ></button>
         <button
           className="colors__button"
-          style={{ background: '#00f' }}
+          style={{ backgroundColor: '#00f' }}
           onClick={this.switchColor}
         ></button>
       </div>
