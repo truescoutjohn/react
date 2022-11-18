@@ -18,19 +18,19 @@ class Colors extends Component {
 
   render() {
     return (
-      <div className="counter">
+      <div className="colors">
         <button
-          className="counter__button"
+          className="colors__button"
           style={{ background: '#f00' }}
           onClick={this.switchColor}
         ></button>
         <button
-          className="counter__button"
+          className="colors__button"
           style={{ background: '#0f0' }}
           onClick={this.switchColor}
         ></button>
         <button
-          className="counter__button"
+          className="colors__button"
           style={{ background: '#00f' }}
           onClick={this.switchColor}
         ></button>
