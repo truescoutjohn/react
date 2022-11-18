@@ -18,21 +18,34 @@ class ColorPicker extends Component {
     this.leaveMouse = this.leaveMouse.bind(this);
   }
   enterMouse(event) {
-    const arrayClass = [...event.target.classList]
-      .find(element => /(?<=[a-zA-Z]|^)([_])(?=[a-zA-Z]|$)/.test(element))
-      .split('_');
-
-    if (arrayClass && arrayClass.length === 0) {
-      return undefined;
+    if (event.target.classList.contains('picker__button_coral')) {
+      this.setState({
+        color: 'Coral',
+      });
+    } else if (event.target.classList.contains('picker__button_aqua')) {
+      this.setState({
+        color: 'Aqua',
+      });
+    } else if (event.target.classList.contains('picker__button_bisque')) {
+      this.setState({
+        color: 'Bisque',
+      });
     }
+    // const arrayClass = [...event.target.classList]
+    //   .find(element => /(?<=[a-zA-Z]|^)([_])(?=[a-zA-Z]|$)/.test(element))
+    //   .split('_');
 
-    const colorString =
-      arrayClass[arrayClass.length - 1][0].toUpperCase() +
-      arrayClass[arrayClass.length - 1].slice(1);
+    // if (arrayClass && arrayClass.length === 0) {
+    //   return undefined;
+    // }
 
-    this.setState({
-      color: colorString,
-    });
+    // const colorString =
+    //   arrayClass[arrayClass.length - 1][0].toUpperCase() +
+    //   arrayClass[arrayClass.length - 1].slice(1);
+
+    // this.setState({
+    //   color: colorString,
+    // });
   }
 
   leaveMouse() {
