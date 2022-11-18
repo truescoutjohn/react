@@ -16,7 +16,7 @@ class Clock extends Component {
 
     setInterval(() => {
       this.setState({
-        time: this.state.time,
+        time: this.getTimeWithOffset(this.props.offset),
       });
     }, 1000);
   }
@@ -32,7 +32,7 @@ class Clock extends Component {
     return (
       <div className="clock">
         <div className="clock__location">{this.props.location}</div>
-        <div className="clock__time">{this.getTime(this.getTimeWithOffset(this.props.offset))}</div>
+        <div className="clock__time">{this.getTime(this.state.time)}</div>
       </div>
     );
   }
