@@ -6,7 +6,7 @@ import './goodButton.scss';
 // 3. Change and render new time after each second
 //  3.1. Use moment to transform date to time
 
-class Counter extends Component {
+class GoodButton extends Component {
   constructor(props) {
     super(props);
   }
@@ -17,11 +17,11 @@ class Counter extends Component {
 
   render() {
     return (
-      <div className="fancy-button" onClick={this.click.bind(this)}>
+      <button className="fancy-button" onClick={this.click.bind(this)}>
         Click me
-      </div>
+      </button>
     );
   }
 }
 
-export default Counter;
+export default GoodButton;
