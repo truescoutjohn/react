@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from './Button.jsx';
+import GoodButton from './GoodButton.jsx';
 
 const App = props => {
-  return <Button />;
+  return <GoodButton />;
 };
 
 export default App;

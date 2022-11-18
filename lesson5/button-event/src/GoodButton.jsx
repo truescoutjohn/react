@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.scss';
 
-const Button = props => {
+const GoodButton = props => {
   return (
     <button className="fancy-button" onClick={() => alert('Good job!')}>
       Good button!
@@ -9,4 +9,4 @@ const Button = props => {
   );
 };
 
-export default Button;
+export default GoodButton;
