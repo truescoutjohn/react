@@ -6,9 +6,9 @@ import Clock from './Clock.jsx';
 const App = props => {
   return (
     <>
-      <Clock offset={-5} location="New York" />
-      <Clock offset={2} location="Kiyv" />
-      <Clock offset={0} location="London" />
+      <Clock offset={-5} location="NEW YORK" />
+      <Clock offset={2} location="KYIV" />
+      <Clock offset={0} location="LONDON" />
     </>
   );
 };

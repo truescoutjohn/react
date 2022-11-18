@@ -22,10 +22,10 @@ class Clock extends Component {
       });
     }, 1000);
   }
-  getTimeWithOffset() {
+  getTimeWithOffset(offset) {
     const currentTime = new Date();
     const utcOffset = currentTime.getTimezoneOffset() / 60;
-    return new Date(currentTime.setHours(currentTime.getHours() + this.props.offset + utcOffset));
+    return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
   }
   getTime(date) {
     return moment(date).format('h:mm:ss A');
@@ -34,7 +34,7 @@ class Clock extends Component {
     return (
       <div className="clock">
         <div className="clock__location">{this.props.location}</div>
-        <div className="clock__time">{this.getTime(this.getTimeWithOffset())}</div>
+        <div className="clock__time">{this.getTime(this.getTimeWithOffset(this.props.offset))}</div>
       </div>
     );
   }
