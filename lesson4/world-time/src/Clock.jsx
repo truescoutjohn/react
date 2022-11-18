@@ -28,7 +28,7 @@ class Clock extends Component {
     return new Date(currentTime.setHours(currentTime.getHours() + this.props.offset + utcOffset));
   }
   getTime(date) {
-    return moment(date).format('hh:mm:ss A');
+    return moment(date).format('h:mm:ss A');
   }
   render() {
     return (
