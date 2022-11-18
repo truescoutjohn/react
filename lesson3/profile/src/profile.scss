@@ -1,0 +1,14 @@
+.profile {
+  margin: auto;
+  width: 200px;
+  border-radius: 30px;
+  border: 1px solid blue;
+
+  &__birth {
+    text-align: center;
+  }
+
+  &__name {
+    text-align: center;
+  }
+}
