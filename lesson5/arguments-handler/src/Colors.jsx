@@ -7,6 +7,11 @@
 import React, { Component } from 'react';
 
 class Colors extends Component {
+  constructor(props) {
+    super(props);
+    this.switchColor = this.switchColor.bind(this);
+  }
+
   switchColor(event) {
     document.body.style.backgroundColor = event.target.style.backgroundColor;
   }
@@ -17,17 +22,17 @@ class Colors extends Component {
         <button
           className="colors__button"
           style={{ backgroundColor: '#f00' }}
-          onClick={this.switchColor.bind(this)}
+          onClick={this.switchColor}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: '#0f0' }}
-          onClick={this.switchColor.bind(this)}
+          onClick={this.switchColor}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: '#00f' }}
-          onClick={this.switchColor.bind(this)}
+          onClick={this.switchColor}
         ></button>
       </div>
     );
