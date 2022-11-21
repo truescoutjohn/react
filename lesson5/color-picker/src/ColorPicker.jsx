@@ -8,6 +8,10 @@ import React, { Component } from 'react';
 // 6. transform first letter(to upper case)
 // 7. set to state transformed class
 // 8. create event with mouseleave and set state empty string
+const CORAL = 'coral';
+const AQUA = 'aqua';
+const BISQUE = 'bisque';
+
 class ColorPicker extends Component {
   constructor(props) {
     super(props);
@@ -43,6 +47,12 @@ class ColorPicker extends Component {
     });
   }
 
+  setTitle(colorName) {
+    this.setState({
+      color: colorName,
+    });
+  }
+
   leaveMouse() {
     this.setState({
       color: '',
@@ -55,17 +65,23 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            onMouseEnter={this.enterMouse}
+            onMouseEnter={() => {
+              this.setTitle('Coral');
+            }}
             onMouseLeave={this.leaveMouse}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onMouseEnter={this.enterMouse}
+            onMouseEnter={() => {
+              this.setTitle('Aqua');
+            }}
             onMouseLeave={this.leaveMouse}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onMouseEnter={this.enterMouse}
+            onMouseEnter={() => {
+              this.setTitle('Bisque');
+            }}
             onMouseLeave={this.leaveMouse}
           ></button>
         </div>
