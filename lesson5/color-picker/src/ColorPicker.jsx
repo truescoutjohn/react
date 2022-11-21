@@ -16,36 +16,31 @@ class ColorPicker extends Component {
     };
     this.enterMouse = this.enterMouse.bind(this);
     this.leaveMouse = this.leaveMouse.bind(this);
+    this._findCssClassWithModificator = this._findCssClassWithModificator.bind(this);
+    this._capitalizeFirstLetterWord = this._capitalizeFirstLetterWord.bind(this);
   }
+
+  _findCssClassWithModificator(event) {
+    return [...event.target.classList]
+      .find(element => /(?<=[a-zA-Z0-9]|^)([_])(?=[a-zA-Z0-9]|$)/.test(element))
+      .split('_');
+  }
+
+  _capitalizeFirstLetterWord(word) {
+    return word[0].toUpperCase() + word.slice(1);
+  }
+
   enterMouse(event) {
-    if (event.target.classList.contains('picker__button_coral')) {
-      this.setState({
-        color: 'Coral',
-      });
-    } else if (event.target.classList.contains('picker__button_aqua')) {
-      this.setState({
-        color: 'Aqua',
-      });
-    } else if (event.target.classList.contains('picker__button_bisque')) {
-      this.setState({
-        color: 'Bisque',
-      });
+    const arrayClass = this._findCssClassWithModificator(event);
+    if (arrayClass && arrayClass.length === 0) {
+      return undefined;
     }
-    // const arrayClass = [...event.target.classList]
-    //   .find(element => /(?<=[a-zA-Z]|^)([_])(?=[a-zA-Z]|$)/.test(element))
-    //   .split('_');
 
-    // if (arrayClass && arrayClass.length === 0) {
-    //   return undefined;
-    // }
+    const colorString = this._capitalizeFirstLetterWord(arrayClass[arrayClass.length - 1]);
 
-    // const colorString =
-    //   arrayClass[arrayClass.length - 1][0].toUpperCase() +
-    //   arrayClass[arrayClass.length - 1].slice(1);
-
-    // this.setState({
-    //   color: colorString,
-    // });
+    this.setState({
+      color: colorString,
+    });
   }
 
   leaveMouse() {
