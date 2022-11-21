@@ -5,6 +5,9 @@
 //   2.2. Apply this color to body
 
 import React, { Component } from 'react';
+const RED = '#f00';
+const GREEN = '#0f0';
+const BLUE = '#00f';
 
 class Colors extends Component {
   constructor(props) {
@@ -12,8 +15,8 @@ class Colors extends Component {
     this.switchColor = this.switchColor.bind(this);
   }
 
-  switchColor(event) {
-    document.body.style.backgroundColor = event.target.style.backgroundColor;
+  switchColor(color) {
+    document.body.style.backgroundColor = color;
   }
 
   render() {
@@ -21,18 +24,18 @@ class Colors extends Component {
       <div className="colors">
         <button
           className="colors__button"
-          style={{ backgroundColor: '#f00' }}
-          onClick={this.switchColor}
+          style={{ backgroundColor: RED }}
+          onClick={() => this.switchColor(RED)}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: '#0f0' }}
-          onClick={this.switchColor}
+          onClick={() => this.switchColor(GREEN)}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: '#00f' }}
-          onClick={this.switchColor}
+          onClick={() => this.switchColor(BLUE)}
         ></button>
       </div>
     );
