@@ -10,7 +10,7 @@ const Greeting = ({ isLogged }) => {
     greeting = <GuestGreeting />;
   }
 
-  return <>{greeting}</>;
+  return greeting;
 };
 
 export default Greeting;
