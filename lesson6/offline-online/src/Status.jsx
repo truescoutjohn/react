@@ -3,7 +3,7 @@ import Online from './Online.jsx';
 import Offline from './Offline.jsx';
 
 const Status = () => {
-  const isOnline = false;
+  const isOnline = true;
   return <>{isOnline ? <Online /> : <Offline />}</>;
 };
 
