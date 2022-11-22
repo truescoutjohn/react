@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NumbersList = props => {
-  return <li>{props.number}</li>;
+  return <li>{props.numbers}</li>;
 };
 
 export default NumbersList;
