@@ -1,6 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 
+const formatter = new Intl.NumberFormat('en-GB');
+
 const Transaction = props => {
   const [date, time] = moment(new Date(props.transaction.time)).format('DD MMM-HH:mm').split('-');
 
@@ -12,9 +14,7 @@ const Transaction = props => {
         {props.transaction.from}-{props.transaction.to}
       </span>
       <span className="transaction__rate">{props.transaction.rate}</span>
-      <span className="transaction__amount">
-        {new Intl.NumberFormat('en-GB').format(props.transaction.amount)}
-      </span>
+      <span className="transaction__amount">{formatter.format(props.transaction.amount)}</span>
     </li>
   );
 };
