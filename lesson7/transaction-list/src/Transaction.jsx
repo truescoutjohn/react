@@ -11,7 +11,7 @@ const Transaction = props => {
       <span className="transaction__date">{date}</span>
       <span className="transaction__time">{time}</span>
       <span className="transaction__assets">
-        {props.from}-{props.to}
+        {props.from} &#8594; {props.to}
       </span>
       <span className="transaction__rate">{props.rate}</span>
       <span className="transaction__amount">{formatter.format(props.amount)}</span>
