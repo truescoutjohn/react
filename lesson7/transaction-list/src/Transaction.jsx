@@ -11,9 +11,7 @@ const Transaction = props => {
       <span className="transaction__assets">
         {props.transaction.from}-{props.transaction.to}
       </span>
-      <span className="transaction__rate">
-        {new Intl.NumberFormat('en-GB').format(props.transaction.rate)}
-      </span>
+      <span className="transaction__rate">{props.transaction.rate}</span>
       <span className="transaction__amount">
         {new Intl.NumberFormat('en-GB').format(props.transaction.amount)}
       </span>
