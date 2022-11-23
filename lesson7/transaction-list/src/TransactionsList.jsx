@@ -30,9 +30,9 @@ const transactions = [
 
 const TransactionsList = props => {
   return (
-    <ul class="transactions">
+    <ul className="transactions">
       {transactions.map(transaction => (
-        <Transaction key={transaction.id} {...transaction} />
+        <Transaction key={transaction.id} transaction={transaction} />
       ))}
     </ul>
   );
