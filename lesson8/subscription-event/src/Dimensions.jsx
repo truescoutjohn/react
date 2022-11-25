@@ -27,7 +27,7 @@ class Dimensions extends Component {
     return {
       innerHeight: window.innerHeight,
       innerWidth: window.innerWidth,
-      title: `${window.innerHeight} x ${window.innerWidth}`,
+      title: `${window.innerWidth} x ${window.innerHeight}`,
     };
   }
   render() {
