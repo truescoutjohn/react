@@ -19,21 +19,27 @@ class ConnectionStatus extends Component {
   }
 
   _onlineHandler(event) {
-    document.querySelector('.status').classList.remove('status_offline');
+    // document.querySelector('.status').classList.remove('status_offline');
     this.setState({
       connection: 'online',
     });
   }
 
   _offlineHandler(event) {
-    document.querySelector('.status').classList.add('status_offline');
+    // document.querySelector('.status').classList.add('status_offline');
     this.setState({
       connection: 'offline',
     });
   }
 
   render() {
-    return <div className="status">{this.state.connection}</div>;
+    let result;
+    if (this.state.connection === 'online') {
+      result = <div className="status">online</div>;
+    } else {
+      result = <div className="status status_offline">offline</div>;
+    }
+    return result;
   }
 }
 
