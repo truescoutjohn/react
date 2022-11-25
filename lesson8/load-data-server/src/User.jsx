@@ -4,7 +4,7 @@ class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: {},
+      user: null,
     };
   }
   componentDidMount() {
@@ -18,10 +18,12 @@ class User extends Component {
   }
 
   render() {
-    const { avatar_url, location, login } = this.state.user;
-    if (!login) {
+    const { user } = this.state;
+    if (!user) {
       return null;
     }
+
+    const { avatar_url, location, login } = user;
 
     return (
       <div className="user">
