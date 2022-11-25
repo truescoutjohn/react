@@ -27,7 +27,7 @@ class User extends Component {
       return null;
     }
 
-    const { avatar_url, location, login: name } = user;
+    const { avatar_url, location, name } = user;
 
     return (
       <div className="user">
