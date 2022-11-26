@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Filter from './Filter.jsx';
 import User from './User.jsx';
 
-class UserList extends Component {
+class UsersList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,4 +50,4 @@ class UserList extends Component {
   }
 }
 
-export default UserList;
+export default UsersList;
