@@ -20,7 +20,8 @@ class UserList extends Component {
   onInputChange(event) {
     const filterText = event.target.value;
     const countNotFoundUser = this.props.users.reduce(
-      (counter, user) => (!this._filterUser(user, filterText) ? counter + 1 : counter),
+      (counter, user) =>
+        !this._filterUser(user, filterText) || filterText.length === 0 ? counter + 1 : counter,
       0,
     );
     this.setState({
