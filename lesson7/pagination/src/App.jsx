@@ -26,6 +26,21 @@ const users = [
     age: 45,
     name: 'Sam',
   },
+  {
+    id: 'id-4',
+    age: 45,
+    name: 'Sam',
+  },
+  {
+    id: 'id-5',
+    age: 45,
+    name: 'Sam',
+  },
+  {
+    id: 'id-6',
+    age: 21,
+    name: 'Bob',
+  },
 ];
 
 const App = props => {
