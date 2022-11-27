@@ -1,24 +1,18 @@
 import React from 'react';
 const renderNextButton = (isNextPageAvailable, goNext) => {
-  if (!isNextPageAvailable) {
-    return (
-      <button className="btn" onClick={goNext} disabled={isNextPageAvailable}>
-        →
-      </button>
-    );
-  }
-  return <button className="btn" onClick={goNext} disabled={isNextPageAvailable}></button>;
+  return (
+    <button className="btn" onClick={goNext} disabled={isNextPageAvailable}>
+      {!isNextPageAvailable ? '→' : ''}
+    </button>
+  );
 };
 
 const renderPrevButton = (isPrevPageAvailable, goPrev) => {
-  if (!isPrevPageAvailable) {
-    return (
-      <button className="btn" onClick={goPrev} disabled={isPrevPageAvailable}>
-        ←
-      </button>
-    );
-  }
-  return <button className="btn" onClick={goPrev} disabled={isPrevPageAvailable}></button>;
+  return (
+    <button className="btn" onClick={goPrev} disabled={isPrevPageAvailable}>
+      {!isPrevPageAvailable ? '←' : ''}
+    </button>
+  );
 };
 
 const Pagination = props => {
