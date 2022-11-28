@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class OddNumbers extends Component {
   shouldComponentUpdate() {
-    return this.props.number % 2 !== 0;
+    return this.props.number % 2 === 0;
   }
 
   render() {
