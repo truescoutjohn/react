@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import FilterableProductTable from './FilterableProducttable.jsx';
+import FilterableProductTable from './FilterableProductTable.jsx';
 
 const products = [
   { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
