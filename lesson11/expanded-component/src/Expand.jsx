@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Expand = props => {
-  const style = props.isShowed ? { transform: 'rotate(180deg)' } : {};
+  const style = props.isShowed ? {} : { transform: 'rotate(180deg)' };
   return (
     <div className="expand border">
       <div className="expand__header">
