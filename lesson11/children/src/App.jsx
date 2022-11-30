@@ -20,6 +20,7 @@ class App extends Component {
       isOpen: true,
     });
   };
+
   render() {
     return (
       <div className="app">

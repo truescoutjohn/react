@@ -8,12 +8,10 @@ export const withDataLoader = url => {
         data: null,
         isShowed: true,
       };
-      componentDidMount() {
-        fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            this.setState({ data, isShowed: false });
-          });
+      async componentDidMount() {
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({ data, isShowed: false });
       }
       render() {
         return (

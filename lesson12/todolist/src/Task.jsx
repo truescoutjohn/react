@@ -9,7 +9,7 @@ const Task = ({ id, text, done, onChange, onDelete }) => {
         type="checkbox"
         className="list-item__checkbox"
         defaultChecked={done}
-        onClick={() => onChange(id)}
+        onChange={() => onChange(id)}
       />
       {text}
       <button className="list-item__delete-btn" onClick={() => onDelete(id)}></button>
@@ -20,7 +20,7 @@ const Task = ({ id, text, done, onChange, onDelete }) => {
 export default Task;
 
 Task.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   text: PropTypes.string,
   done: PropTypes.bool,
   onChange: PropTypes.func,
