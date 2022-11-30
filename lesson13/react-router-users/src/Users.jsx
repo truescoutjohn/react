@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import User from './User.jsx';
 
 function Users({ match }) {
@@ -14,7 +14,12 @@ function Users({ match }) {
           <Link to={`${match.url}/facebook`}>Facebook</Link>
         </li>
       </ul>
-      <Route path={`${match.url}/:userId`} component={User} />
+      <Switch>
+        <Route exact path={match.url}>
+          <span>Select a user please</span>
+        </Route>
+        <Route path={`${match.url}/:userId`} component={User} />
+      </Switch>
     </div>
   );
 }
