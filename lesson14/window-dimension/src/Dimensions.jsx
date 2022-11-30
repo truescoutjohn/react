@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Dimension = props => {
+const Dimensions = props => {
   const [dimension, setDimension] = useState({ innerWidth: null, innerHeight: null });
   useEffect(() => {
     const { innerHeight, innerWidth } = window;
@@ -23,4 +23,4 @@ const Dimension = props => {
   );
 };
 
-export default Dimension;
+export default Dimensions;
